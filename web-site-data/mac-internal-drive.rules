@@ -1,0 +1,8 @@
+drive-base-path: ~/Music Library/
+serato-base-path: autodetect
+
+run backup-serato-db
+
+run sync
+
+run prune-serato-db

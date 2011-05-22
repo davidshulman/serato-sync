@@ -1,0 +1,17 @@
+drive-base-path: /Volumes/External Drive Roman/
+serato-base-path: autodetect
+
+run backup-serato-db
+
+run sync {
+    folder: /Music/iTunes/iTunes Music/Music
+    crate: /external-music
+    exclude: from-Alexander, RECORDINGS, SLOW
+}
+
+run sync {
+    folder: /Video
+    crate: /external-video
+}
+
+run prune-serato-db
