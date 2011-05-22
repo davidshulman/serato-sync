@@ -1,0 +1,19 @@
+drive-base-path: /Users/serato/Music/Library
+serato-base-path: autodetect
+
+run backup-serato-db {
+    include: /Crates/*, /Subcrates*, /database V2, /*.pref
+    folder: /Backup
+}
+
+run sync {
+    folder: /
+    crate: /
+    exclude: /UP-TO-2010-*, /UP-TO*/*house*
+}
+
+run prune-serato-db {
+    remove-missing-tracks: true
+    remove-empty-crates: true
+    sort-crates: default descending, level 1 ascending
+}

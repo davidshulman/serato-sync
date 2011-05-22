@@ -1,0 +1,8 @@
+drive-base-path: /Volumes/External Drive Name/Music Library/
+serato-base-path: autodetect
+
+run backup-serato-db
+
+run sync
+
+run prune-serato-db
